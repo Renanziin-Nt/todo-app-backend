@@ -10,6 +10,7 @@ RUN npm install --production
 
 COPY . .
 
+RUN npm run build
 
 EXPOSE 80
 
