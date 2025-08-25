@@ -75,3 +75,10 @@ jobs:
             --cluster todo-app-backend-cluster \
             --service todo-app-service \
             --force-new-deployment
+        
+      - name: Force ECS Service Update
+        run: |
+          aws ecs update-service \
+            --cluster todo-app-backend-cluster \
+            --service todo-app-service \
+            --force-new-deployment
