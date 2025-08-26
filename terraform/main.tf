@@ -181,7 +181,7 @@ resource "aws_lb_target_group" "app" {
   }
 }
 
-/*resource "aws_lb_listener" "app" {
+resource "aws_lb_listener" "app" {
   load_balancer_arn = aws_lb.app.arn
   port              = "80"
   protocol          = "HTTP"
@@ -191,7 +191,7 @@ resource "aws_lb_target_group" "app" {
     target_group_arn = aws_lb_target_group.app.arn
   }
   depends_on = [aws_lb_target_group.app]
-}*/
+}
 
 # CloudWatch Log Group para ECS
 resource "aws_cloudwatch_log_group" "app" {
