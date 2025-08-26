@@ -177,7 +177,7 @@ resource "aws_lb_target_group" "app" {
 
 resource "aws_lb_listener" "app" {
   load_balancer_arn = aws_lb.app.arn
-  port              = "80"
+  port              = "3000"
   protocol          = "HTTP"
   
   default_action {
@@ -288,7 +288,7 @@ resource "aws_ecs_service" "app" {
   load_balancer {
     target_group_arn = aws_lb_target_group.app.arn
     container_name   = "todo-app-backend"
-    container_port   = 80
+    container_port   = 3000
   }
   
   depends_on = [
