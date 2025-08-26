@@ -234,6 +234,10 @@ resource "aws_ecs_task_definition" "app" {
         {
           name  = "SUPABASE_URL"
           value = "postgresql://postgres.ijyiueuiticjzobfyrxf:Vacareti_%231@aws-1-sa-east-1.pooler.supabase.com:6543/postgres?pgbouncer=true&schema=public"
+        },
+        {
+          name  = "DATABASE_URL"
+          value = "postgresql://postgres.ijyiueuiticjzobfyrxf:Vacareti_%231@aws-1-sa-east-1.pooler.supabase.com:6543/postgres?pgbouncer=true&schema=public"
         }
       ]
     }
